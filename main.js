@@ -19,9 +19,9 @@ function result() {
 
 
     let newStory = storyText;
-    let xItem = randomValueFromArray(insertX);
-    let yItem = randomValueFromArray(inserty);
-    let zItem = randomValueFromArray(insertz);
+    const xItem = randomValueFromArray(insertX);
+    const yItem = randomValueFromArray(insertY);
+    const zItem = randomValueFromArray(insertZ);
 
     newStory = newStory.replaceAll(":insertx:", xItem);
     newStory = newStory.replaceAll(":inserty:", yItem);
@@ -29,13 +29,13 @@ function result() {
 
   if(customName.value !== '') {
     const name = customName.value;
-    newStory = newStory.replaceAll("bob", name)
+    newStory = newStory.replaceAll("Bob", name)
 
   }
 
   if(document.getElementById("uk").checked) {
-    const weight = math.round(300/14) + " stone";
-    const temperature =  math.round((94-32)*(5/9)) + " centigrade";
+    const weight = Math.round(300/14) + " stone";
+    const temperature =  Math.round((94-32)*(5/9)) + " centigrade";
 
     newStory = newStory.replace("94 fahrenheit", temperature);
     newStory = newStory.replace("300 pounds", weight);
